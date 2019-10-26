@@ -73,5 +73,5 @@ def heap_sort(array, comparator=default_comparator, reverse=False):
     return heap.heap
 
 
-a = input().split()
+a = list(map(int, input().split()))
 print(heap_sort(a))
