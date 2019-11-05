@@ -35,8 +35,7 @@ class Heap:
         if self.size > 1:
             self._sift_down()
 
-    def _sift_down(self):
-        index = 0
+    def _sift_down(self, index=0):
         item = self.heap[index]
         child1_index = 1
         child2_index = 2
@@ -66,8 +65,8 @@ class Heap:
 
 def heap_sort(array, comparator=default_comparator, reverse=False):
     heap = Heap(comparator=comparator, reverse=reverse)
-    for item in array:
-        heap.insert(item)
+    for n in array:
+        heap.insert(n)
     while heap.size > 1:
         heap.pop()
     return heap.heap
